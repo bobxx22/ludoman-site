@@ -7,6 +7,7 @@ import Image from "next/image"
 import { Copy } from "lucide-react"
 
 import { useLanguage } from "@/lib/contexts/LanguageContext"
+import { CONTRACT_ADDRESS } from "@/lib/constants/tokenomics"
 import { LudomanLogo } from "@/components/LudomanLogo" // ← Новый компонент
 
 export function Home() {
@@ -14,9 +15,9 @@ export function Home() {
 
   const { t } = useLanguage()
 
-  const contractAddress = "EQDbKihXMZuNfl7m7VcNrHIyYYYYgCFPhccIqNNN_ocNnn-PBCb"
+  const contractAddress = CONTRACT_ADDRESS
   const dexScreenerLink = "https://dexscreener.com/ton/eqduk1q0zadi3cwkyzrqtiiavmazqgykifyrdbbhliptxqav"
-  const buyLink = "https://app.ston.fi/swap?chartVisible=false&chartInterval=1w&ft=TON&tt=EQDbKihXMZuNfl7m7VcNrHIyYYYYgCFPhccIqNN_ocNn-PBCb"
+  const buyLink = `https://app.ston.fi/swap?chartVisible=false&chartInterval=1w&ft=TON&tt=${CONTRACT_ADDRESS}`
 
   const handleCopy = () => {
     navigator.clipboard.writeText(contractAddress)

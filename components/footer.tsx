@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Twitter, MessageCircle, Users } from "lucide-react"
 import { useLanguage } from "@/lib/contexts/LanguageContext"
+import { CONTRACT_ADDRESS } from "@/lib/constants/tokenomics"
 
 export function Footer() {
   const { t } = useLanguage()
@@ -100,7 +101,7 @@ export function Footer() {
 
         <div className="border-t mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            {t("footer.copyright")} | <Link href="https://app.ston.fi/swap?chartVisible=false&chartInterval=1w&ft=TON&tt=EQDbKihXMZuNfl7m7VcNrHIyYYYYgCFPhccIqNN_ocNn-PBCb" className="hover:text-primary">{t("footer.swapOn")}</Link> | <Link href="https://dexscreener.com/ton/eqduk1q0zadi3cwkyzrqtiiavmazqgykifyrdbbhliptxqav" className="hover:text-primary">{t("footer.dexScreener")}</Link>
+            {t("footer.copyright")} | <Link href={`https://app.ston.fi/swap?chartVisible=false&chartInterval=1w&ft=TON&tt=${CONTRACT_ADDRESS}`} className="hover:text-primary">{t("footer.swapOn")}</Link> | <Link href="https://dexscreener.com/ton/eqduk1q0zadi3cwkyzrqtiiavmazqgykifyrdbbhliptxqav" className="hover:text-primary">{t("footer.dexScreener")}</Link>
           </p>
         </div>
       </div>
