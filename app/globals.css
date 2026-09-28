@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 25% 7.8431%;
+  --card: 180 6.6667% 97.0588%;
+  --card-foreground: 210 25% 7.8431%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 25% 7.8431%;
+  --primary: 270 88.2845% 53.1373%;                   /* 🟣 ИЗМЕНЕНО: 203.8863 → 270 (фиолетовый) */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 25% 7.8431%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 240 1.9608% 90%;
+  --muted-foreground: 210 25% 7.8431%;
+  --accent: 270 51.3514% 92.7451%;                    /* 🟣 ИЗМЕНЕНО: 211.5789 → 270 */
+  --accent-foreground: 270 88.2845% 53.1373%;         /* 🟣 ИЗМЕНЕНО: 203.8863 → 270 */
+  --destructive: 356.3033 90.5579% 54.3137%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 270 30.4348% 90.9804%;                    /* 🟣 ИЗМЕНЕНО: 201.4286 → 270 */
+  --input: 270 23.0769% 97.4510%;                     /* 🟣 ИЗМЕНЕНО: 200 → 270 */
+  --ring: 270 89.1213% 53.1373%;                      /* 🟣 ИЗМЕНЕНО: 202.8169 → 270 */
+  --chart-1: 270 88.2845% 53.1373%;                   /* 🟣 ИЗМЕНЕНО: 203.8863 → 270 */
+  --chart-2: 159.7826 100% 36.0784%;
+  --chart-3: 42.0290 92.8251% 56.2745%;
+  --chart-4: 147.1429 78.5047% 41.9608%;
+  --chart-5: 341.4894 75.2000% 50.9804%;
+  --sidebar: 180 6.6667% 97.0588%;
+  --sidebar-foreground: 210 25% 7.8431%;
+  --sidebar-primary: 270 88.2845% 53.1373%;           /* 🟣 ИЗМЕНЕНО: 203.8863 → 270 */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 51.3514% 92.7451%;            /* 🟣 ИЗМЕНЕНО: 211.5789 → 270 */
+  --sidebar-accent-foreground: 270 88.2845% 53.1373%; /* 🟣 ИЗМЕНЕНО: 203.8863 → 270 */
+  --sidebar-border: 270 25.0000% 90.5882%;            /* 🟣 ИЗМЕНЕНО: 205.0000 → 270 */
+  --sidebar-ring: 270 89.1213% 53.1373%;              /* 🟣 ИЗМЕНЕНО: 202.8169 → 270 */
+  --font-sans: Open Sans, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+  --shadow-x: 0px;
+  --shadow-y: 2px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0;
+  --shadow-color: rgba(147,51,234,0.15);              /* 🟣 ИЗМЕНЕНО: фиолетовый вместо голубого */
+  --shadow-2xs: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 2px 4px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 4px 6px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 8px 10px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 200 6.6667% 91.1765%;
+  --card: 228 9.8039% 10%;
+  --card-foreground: 0 0% 85.0980%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 200 6.6667% 91.1765%;
+  --primary: 270 87.6033% 52.5490%;           /* 🟣 ИЗМЕНЕНО: 203.7736 → 270 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 195.0000 15.3846% 94.9020%;
+  --secondary-foreground: 210 25% 7.8431%;
+  --muted: 0 0% 9.4118%;
+  --muted-foreground: 210 3.3898% 46.2745%;
+  --accent: 270 70% 7.8431%;                 /* 🟣 ИЗМЕНЕНО: 205.7143 → 270 */
+  --accent-foreground: 270 87.6033% 52.5490%; /* 🟣 ИЗМЕНЕНО: 203.7736 → 270 */
+  --destructive: 356.3033 90.5579% 54.3137%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 270 5.2632% 14.9020%;           /* 🟣 ИЗМЕНЕНО: 210 → 270 */
+  --input: 270 27.6596% 18.4314%;            /* 🟣 ИЗМЕНЕНО: 207.6923 → 270 */
+  --ring: 270 89.1213% 53.1373%;             /* 🟣 ИЗМЕНЕНО: 202.8169 → 270 */
+  --chart-1: 270 88.2845% 53.1373%;          /* 🟣 ИЗМЕНЕНО: 203.8863 → 270 */
+  --chart-2: 159.7826 100% 36.0784%;
+  --chart-3: 42.0290 92.8251% 56.2745%;
+  --chart-4: 147.1429 78.5047% 41.9608%;
+  --chart-5: 341.4894 75.2000% 50.9804%;
+  --sidebar: 228 9.8039% 10%;
+  --sidebar-foreground: 0 0% 85.0980%;
+  --sidebar-primary: 270 89.1213% 53.1373%;  /* 🟣 ИЗМЕНЕНО: 202.8169 → 270 */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 70% 7.8431%;         /* 🟣 ИЗМЕНЕНО: 205.7143 → 270 */
+  --sidebar-accent-foreground: 270 87.6033% 52.5490%; /* 🟣 ИЗМЕНЕНО: 203.7736 → 270 */
+  --sidebar-border: 270 15.7895% 26.0784%;   /* 🟣 ИЗМЕНЕНО: 205.7143 → 270 */
+  --sidebar-ring: 270 89.1213% 53.1373%;     /* 🟣 ИЗМЕНЕНО: 202.8169 → 270 */
+  --font-sans: Open Sans, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+  --shadow-x: 0px;
+  --shadow-y: 2px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0;
+  --shadow-color: rgba(147,51,234,0.25);     /* 🟣 ИЗМЕНЕНО: фиолетовый вместо голубого */
+  --shadow-2xs: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 2px 4px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 4px 6px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00), 0px 8px 10px -1px hsl(270 89.1213% 53.1373% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(270 89.1213% 53.1373% / 0.00);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 80px;
+}
+
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  letter-spacing: var(--tracking-normal);
+}
+
+@layer base {
+  * {
+    @apply text-foreground border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .btn-hover {
+    @apply transition-colors duration-200 hover:bg-gray-100 hover:text-gray-900;
+  }
+
+  .btn-hover-dark {
+    @apply transition-colors duration-200 hover:bg-gray-800 hover:text-gray-100;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Plasma */
+.plasma-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Apple Site Header Glass Effects - Clean, Minimal, Crisp */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.liquid-glass-enhanced {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.liquid-glass-header {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.liquid-glass-bulge {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Apple-style glass border utilities - Clean and minimal */
+.glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-border-enhanced {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.glass-border-subtle {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced glass border hover effects with chromatic aberration */
+.glass-border:hover {
+  filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.1)) drop-shadow(1px 0 2px rgba(0, 255, 0, 0.08))
+    drop-shadow(-1px 0 2px rgba(0, 0, 255, 0.06));
+}
+
+.glass-border-enhanced:hover {
+  filter: drop-shadow(0 0 3px rgba(255, 0, 0, 0.12)) drop-shadow(1px 0 3px rgba(0, 255, 0, 0.1))
+    drop-shadow(-1px 0 3px rgba(0, 0, 255, 0.08));
+}
+
+.glass-border-subtle:hover {
+  filter: drop-shadow(0 0 1px rgba(255, 0, 0, 0.06)) drop-shadow(0.5px 0 1px rgba(0, 255, 0, 0.05))
+    drop-shadow(-0.5px 0 1px rgba(0, 0, 255, 0.04));
+}
+
+/* Button styles */
+.button-primary {
+  transition: transform 0.2s ease;
+}
+
+.button-primary:hover {
+  transform: scale(1.02);
+}
+
+.button-outline {
+  border: 1px solid var(--muted-foreground);
+  background-color: var(--sidebar-primary);
+  color: var(--secondary);
+  transition: transform 0.2s ease;
+}
+
+.button-outline:hover {
+  transform: scale(1.02);
+}
+
+/* Ensure smooth scaling for all buttons */
+button, .button {
+  transition: transform 0.2s ease;
+}
+
+/* Navigation Link Hover */
+.nav-link:hover {
+  background-color: var(--sidebar-primary);
+  color: var(--primary);
+}
+
+/* В вашем CSS-файле или <style> */
+.lava-lamp-text {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--foreground)) 0%, /* Светлый серо-голубой */
+    color-mix(in srgb, hsl(var(--foreground)) 50%, hsl(var(--primary)) 50%) 50%, /* Смесь foreground и primary */
+    hsl(var(--foreground)) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important; /* Переопределяем возможные конфликты Tailwind */
+  animation: lava-lamp 3s linear infinite;
+}
+
+@keyframes lava-lamp {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}

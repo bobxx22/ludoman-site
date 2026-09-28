@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+*.tsbuildinfo
+
+# env files
+.env
+.env*.local
+
+# local archives, scratch files and logs
+*.zip
+*.log
+Aa.py
+ssasfd.txt
+
+# alternative package manager lockfiles (npm is used)
+bun.lock
+pnpm-lock.yaml
+
+.vercel
+.DS_Store
